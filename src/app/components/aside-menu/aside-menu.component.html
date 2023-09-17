@@ -1,0 +1,94 @@
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+
+            <!--?productos  -->
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-archive"></i> <span>Productos</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a routerLink="nuevoProducto"><i class="fa fa-circle-o"></i>Crear Producto</a></li>
+                    <li><a routerLink="listarProductos"><i class="fa fa-circle-o"></i> Listar </a></li>
+
+
+                </ul>
+            </li>
+
+                        <!--? Clientes  -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-users"></i>
+                    <span>Clientes</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a  routerLink="nuevoCliente"  routerLinkActive="active"><i class="fa fa-circle-o"></i> Crear</a></li>
+                    <li><a routerLink="listarClientes" routerLinkActive="active"><i class="fa fa-circle-o"></i> Listar</a></li>
+                </ul>
+            </li>
+
+            <!--? pedidos -->
+            <li>
+                <a routerLink="nuevoPedido">
+                    <i class="fa fa-file-text-o"></i> <span> Pedido</span>
+                    <small class="label pull-right bg-green">3</small>
+                </a>
+            </li>
+       
+
+
+            <!--?  Estadisticas -->
+            <li class="treeview">
+                <a routerLink="/">
+                    <i class="fa fa-bar-chart"></i>
+                    <span>Estadisticas</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> Productos </a></li>
+                    <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Pedidos </a></li>
+                    <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Clientes</a></li>
+                    <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+
+                </ul>
+            </li>
+
+
+            <!--?  Usuarios -->
+            <li class="treeview">
+                <a routerLink="/">
+                    <i class="fa fa-user"></i>
+                    <span>Usuarios</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> Crear </a></li>
+                    <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Listar </a></li>
+                </ul>
+            </li>
+
+            <!--? conf -->
+            <li>
+                <a routerLink="/configuracion">
+                    <i class="fa fa-cog"></i><span> Configuracion </span>
+                </a>
+            </li>
+
+            <!-- ? acerca de  -->
+            <li>
+                <a routerLink="/">
+                    <i class="fa fa-info-circle"></i> <span> Acerca de </span>
+                    <small class="label pull-right bg-red">3</small>
+                </a>
+            </li>
+
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
