@@ -45,7 +45,7 @@
                         <div class="box-header">
                             <h3 class="box-title"> Previsualizacion factura</h3>
                         </div>
-                        <div class="box-body">
+                        <div class="box-body ">
 
                             <button type="button" class="btn btn-outline-primary" printSectionId="htmlData" ngxPrint >
                                 Generar factura</button>
@@ -67,7 +67,7 @@
                                 </div>
 
                                 <div class="row ">
-                                    <div >
+                                    <div class="col-md-12">
                                         <h2> productos </h2>
                                         <table class="table table-bordered mt-4">
                                             <thead>
@@ -86,8 +86,17 @@
                                                     <td>{{d.precio}}</td>
                                                     <td>{{d.stock}}</td>
                                                     <td>{{d.descripcion}}</td>
+
                                                 </tr>
                                             </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td> subtotal</td>
+                                                    <td > {{subtotal}}</td>
+                                                </tr>
+                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>

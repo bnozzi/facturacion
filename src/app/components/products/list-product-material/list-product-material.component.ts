@@ -3,15 +3,16 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 
-export interface UserData {
+export interface Product {
   id: string;
-  name: string;
-  progress: string;
-  fruit: string;
+  nombre: string;
+  stock: string;
+  precio: string;
+
 }
 
 /** Constants used to fill up our data base. */
-const FRUITS: string[] = [
+const NOMBRES: string[] = [
   'blueberry',
   'lychee',
   'kiwi',
@@ -52,15 +53,15 @@ const NAMES: string[] = [
   styleUrls: ['./list-product-material.component.css'],
 })
 export class ListProductMaterialComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
-  dataSource: MatTableDataSource<UserData>;
+  displayedColumns: string[] = ['id', 'nombre', 'stock', 'precio'];
+  dataSource: MatTableDataSource<Product>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor() {
     // Create 100 users
-    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1000));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
@@ -82,17 +83,17 @@ export class ListProductMaterialComponent implements AfterViewInit {
 }
 
 /** Builds and returns a new User. */
-function createNewUser(id: number): UserData {
+function createNewUser(id: number): Product {
   const name =
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
-    ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
-    '.';
+    NOMBRES[Math.round(Math.random() * (NOMBRES.length - 1))] +
+    ' '
+    
 
   return {
     id: id.toString(),
-    name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+    nombre: name,
+    precio: Math.round((Math.random() * 10000)/10 ).toString(),
+    stock:Math.round(Math.random()*1000).toString() ,
   };
+  
 }

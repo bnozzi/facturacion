@@ -24,8 +24,17 @@ export class PedidoComponent implements OnInit {
       descripcion: 'mate jaja ADd ADS SDsda',
     },
   ];
+  subtotal:any=0;
+   
+  
 
-  constructor() {}
+
+  constructor() {
+
+    this.data.forEach((data:any)=>{
+      this.subtotal+=data.precio;
+    })
+  }
 
   ngOnInit(): void {}
 
